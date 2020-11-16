@@ -7,7 +7,10 @@ class CONTAINER {
 public:
 	CONTAINER() {
 		//初期化
-		initialize("Game", 1320, 1080);
+		initialize("Game", 1980, 1080);
+		startImg = loadImage("start.png");
+		start2Img = loadImage("start_buttom.png");
+		start3Img = loadImage("yazirusi.png");
 		playerImg = loadImage("heart.png");
 		enemyImg=loadImage("zako_1.png");
 		enemyWeponImg = loadImage("weapon_1.png");
@@ -20,6 +23,17 @@ public:
 	const float windowCenterY = windowHeight / 2.0f;
 	const int windowTop = 0;
 	const int windowBottom = windowHeight;
+	//スタートイメージ
+	int startImg = 0;//スタート画面背景
+	const int startPx = 960;
+	const int startPy = 540;
+	int start2Img = 0;//スタート画面Startロゴ
+	const float start2Px=960.0f;
+	const float start2Py=900.0f;
+	int start3Img = 0;//スタート画面矢印画像
+	const float start3Px = 810.0f;
+    float start3Py = 800.0f;
+	int State = 0;
 	//自機
 	int playerImg = 0;
 	float playerPx = 500;

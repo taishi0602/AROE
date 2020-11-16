@@ -16,6 +16,8 @@
     <ClCompile Include="ENEMY_W.cpp" />
     <ClCompile Include="ENEMY1_3.cpp" />
     <ClCompile Include="ENEMIES1_3.cpp" />
+    <ClCompile Include="START.cpp" />
+    <ClCompile Include="START1_1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
@@ -30,5 +32,7 @@
     <ClInclude Include="ENEMY_W.h" />
     <ClInclude Include="ENEMY1_3.h" />
     <ClInclude Include="ENEMIES1_3.h" />
+    <ClInclude Include="START.h" />
+    <ClInclude Include="START1_1.h" />
   </ItemGroup>
 </Project>
