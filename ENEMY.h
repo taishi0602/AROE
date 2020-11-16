@@ -18,6 +18,7 @@ private:
 	float Speed = 0;
 	int Cnt = 0;
 	int TimeCnt = 0;
+	int ImgS = 0;
 	COLOR Color;
 	static ENEMY_BULLETS* Bullets;
 

@@ -11,6 +11,7 @@ public:
 		startImg = loadImage("start.png");
 		start2Img = loadImage("start_buttom.png");
 		start3Img = loadImage("yazirusi.png");
+		scoreImg = loadImage("score.png");
 		playerImg = loadImage("heart.png");
 		enemyImg=loadImage("zako_1.png");
 		enemyWeponImg = loadImage("weapon_1.png");
@@ -34,10 +35,12 @@ public:
 	const float start3Px = 810.0f;
     float start3Py = 800.0f;
 	int State = 0;
+	//スコアプレイ中
+	float scoreImg = 0;
 	//自機
 	int playerImg = 0;
-	float playerPx = 500;
-	float playerPy = 500;
+	float playerPx = 660;
+	float playerPy = 900;
 	//enemy1_1
     int enemyImg = 0;
 	float enemyPx = windowCenterX - 110;

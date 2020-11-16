@@ -8,7 +8,28 @@ void PLAYER::init(CONTAINER*c) {
 }
 void PLAYER::updata() {
 	if (isPress(KEY_UP)) {
-		Py--;
+		Py -= 4.0f;
+	}
+	if (isPress(KEY_DOWN)) {
+		Py += 4.0f;
+	}
+	if (isPress(KEY_LEFT)) {
+		Px -= 4.0f;
+	}
+	else if (isPress(KEY_RIGHT)) {
+		Px += 4.0f;
+	}
+	if (Px <= 65.0f) {
+		Px = 65.0f;
+	}
+	if (Px >= 1255.0f) {
+		Px = 1255.0f;
+	}
+	if (Py <= 90.0f) {
+		Py = 90.0f;
+	}
+	if (Py >= 990.0f) {
+		Py = 990.0f;
 	}
 }
 bool PLAYER::isAttackable() {

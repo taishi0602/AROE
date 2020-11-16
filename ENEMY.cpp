@@ -20,6 +20,8 @@ void ENEMY::init(CONTAINER*c) {
 
 	TriggerInterval = c->enemyTriggerInterval;
 	CorrectRad = c->enemyCorrectRad;
+
+	ImgS = c->scoreImg;//‰¼
 }
 void ENEMY::updata(PLAYER*target) {
 	if (TimeCnt == 60) {
@@ -55,5 +57,8 @@ void ENEMY::updata(PLAYER*target) {
 void ENEMY::draw() {
 	drawImage(Img, Px, Py, Rad, Color);
 	drawImage(ImgW, Px, Py, RadW, Color);
+	drawImage(ImgS, 1650, 540, 0.0f);
+	drawImage(ImgS, 1650, 270, 0.0f);
+	drawImage(ImgS, 1650, 820, 0.0f);
 
 }
