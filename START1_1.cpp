@@ -3,15 +3,15 @@
 #include"input.h"
 #define STATE_PLAY 1
 void START1_1::init(CONTAINER*c) {
-	Img = c->startImg;
-	Px = c->startPx;
-	Py = c->startPy;
-	Img2 = c->start2Img;
-	Px2 = c->start2Px;
-	Py2 = c->start2Py;
-	Img3 = c->start3Img;
-	Px3 = c->start3Px;
-	Py3 = c->start3Py;
+	Img = c->start.Img;
+	Px = c->start.Px;
+	Py = c->start.Py;
+	Img2 = c->startBotton.Img;
+	Px2 = c->startBotton.Px;
+	Py2 = c->startBotton.Py;
+	Img3 = c->startArow.Img;
+	Px3 = c->startArow.Px;
+	Py3 = c->startArow.Py;
 }
 void START1_1::updata(int*state) {
 	if(isTrigger(KEY_Z)&&BlinkStart==0){

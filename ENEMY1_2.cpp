@@ -6,16 +6,16 @@
 ENEMY_BULLETS* ENEMY1_2::Bullets = 0;
 int ENEMY1_2::Idx = 0;
 void ENEMY1_2::init(CONTAINER* c) {
-	Img = c->enemyImg;
-	Px = c->enemy1_2Px;
-	Py = c->enemy1_2Py-Idx;
+	Img = c->enemy1_1.Img;
+	Px = c->enemy1_2.Px;
+	Py = c->enemy1_2.Py-Idx;
 	PyD = Py;
-	Rad = c->enemy1_2Rad;
+	Rad = c->enemy1_2.Rad;
 	Speed = c->enemy1_2Speed;
 	Color =c->enemy1_2Color;
 	Idx += 110;
 
-	ImgW = c->enemyWeponImg;
+	ImgW = c->enemyWeapon.Img;
 	RadW = c->enemyWeponRad;
 	TriggerInterval = c->enemyTriggerInterval;
 	CorrectRad = c->enemyCorrectRad;

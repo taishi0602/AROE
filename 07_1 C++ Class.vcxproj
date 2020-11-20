@@ -177,6 +177,10 @@
     <ClCompile Include="ENEMY_W.cpp" />
     <ClCompile Include="GAME.cpp" />
     <ClCompile Include="PLAYER.cpp" />
+    <ClCompile Include="PLAYER_BULLET.cpp" />
+    <ClCompile Include="PLAYER_BULLETS.cpp" />
+    <ClCompile Include="PLAY_BACK.cpp" />
+    <ClCompile Include="SCORE.cpp" />
     <ClCompile Include="START.cpp" />
     <ClCompile Include="START1_1.cpp" />
   </ItemGroup>
@@ -196,6 +200,10 @@
     <ClInclude Include="ENEMY_W.h" />
     <ClInclude Include="GAME.h" />
     <ClInclude Include="PLAYER.h" />
+    <ClInclude Include="PLAYER_BULLET.h" />
+    <ClInclude Include="PLAYER_BULLETS.h" />
+    <ClInclude Include="PLAY_BACK.h" />
+    <ClInclude Include="SCORE.h" />
     <ClInclude Include="START.h" />
     <ClInclude Include="START1_1.h" />
   </ItemGroup>

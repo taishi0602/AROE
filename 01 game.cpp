@@ -7,6 +7,7 @@
 
 //ゲーム処理エントリーポイント------------------------------------------------------------------
 void gmain(){
+    initialize("Game", 1980, 1080);
     START* start = new START;
     GAME* game = new GAME;
     int state=STATE_TITLE;
@@ -22,5 +23,5 @@ void gmain(){
         }
     }
     delete start;
-    delete game;
+    //delete game;
 }

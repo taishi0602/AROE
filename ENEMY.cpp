@@ -7,21 +7,22 @@
 ENEMY_BULLETS* ENEMY::Bullets = 0;
 int ENEMY::Idx = 1;
 void ENEMY::init(CONTAINER*c) {
-	Img = c->enemyImg;
-	Px = c->enemyPx+Idx;
-	Py = c->enemyPy;
-	Rad = c->enemyRad;
+	Img = c->enemy1_1.Img;
+	Px = c->enemy1_1.Px+Idx;
+	Py = c->enemy1_1.Py;
+	Rad = c->enemy1_1.Rad;
 	Color = c->enemyColor;
 	Speed = c->enemySpeed;
 	Idx += 110;
 
-	ImgW = c->enemyWeponImg;
+	ImgW = c->enemyWeapon.Img;
 	RadW = c->enemyWeponRad;
 
 	TriggerInterval = c->enemyTriggerInterval;
 	CorrectRad = c->enemyCorrectRad;
 
-	ImgS = c->scoreImg;//仮
+	//BlinkNumFrames = c->enemyBlinkNumFrames;
+	//BlinkInterval = c->enemyBlinkInterval;
 }
 void ENEMY::updata(PLAYER*target) {
 	if (TimeCnt == 60) {
@@ -32,7 +33,7 @@ void ENEMY::updata(PLAYER*target) {
 		Cnt = 0;
 		Color.a = 1.0f;
 	}
-	if (Color.a == 1.0f) {
+	if (Color.a >= 0.1f) {
 		Py -= Speed;
 	}
 	if (Py <= 0) {
@@ -52,13 +53,25 @@ void ENEMY::updata(PLAYER*target) {
 
 		}
 	}
-	
+}
+void ENEMY::damage() {//ダメージ時の反応
+	Color.a = 0.0f;
+	Py = 1080 + 50;
 }
 void ENEMY::draw() {
 	drawImage(Img, Px, Py, Rad, Color);
 	drawImage(ImgW, Px, Py, RadW, Color);
-	drawImage(ImgS, 1650, 540, 0.0f);
-	drawImage(ImgS, 1650, 270, 0.0f);
-	drawImage(ImgS, 1650, 820, 0.0f);
-
+}
+//ENEMYの渡す座標セット
+void ENEMY::setPx(float px) {
+	Px = px;
+}
+void ENEMY::setPy(float py) {
+	Py = py;
+}
+float ENEMY::px() {
+	return Px;
+}
+float ENEMY::py() {
+	return Py;
 }

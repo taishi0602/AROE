@@ -9,6 +9,12 @@ public:
 	void updata(PLAYER*target);
 	void draw();
 	static void setBullets(ENEMY_BULLETS* bullets) { Bullets = bullets; }
+	void setPx(float px);
+	void setPy(float py);
+	float px();
+	float py();
+
+	void damage();
 private:
 	static int Idx;
 	int Img = 0;
@@ -18,7 +24,6 @@ private:
 	float Speed = 0;
 	int Cnt = 0;
 	int TimeCnt = 0;
-	int ImgS = 0;
 	COLOR Color;
 	static ENEMY_BULLETS* Bullets;
 

@@ -8,6 +8,8 @@ public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
 	void draw();
+	int num();//GetterŠÖ”
+	ENEMY* enemy(int i);//GetterŠÖ”
 private:
 	int Num = 0;//”z—ñ
 	ENEMY* Enemy = 0;//”z—ñ

@@ -22,3 +22,9 @@ void ENEMIES::draw() {
 		Enemy[i].draw();
 	}
 }
+int ENEMIES::num() {
+	return Num;
+}
+ENEMY* ENEMIES::enemy(int i) {
+	return Enemy + i;
+}
