@@ -2,6 +2,7 @@
 #include"PLAYER.h"
 #include"PLAYER_BULLETS.h"
 #include"input.h"
+#define STATE_RESULT 1
 PLAYER_BULLETS* PLAYER::Bullets = 0;
 void PLAYER::init(CONTAINER*c) {
 	Img = c->player.Img;
@@ -13,7 +14,10 @@ void PLAYER::init(CONTAINER*c) {
 	BlinkNumFrames = c->playerBlinkNumFrames;
 	BlinkInterval = c->playerBlinkInterval;
 }
-void PLAYER::updata() {
+void PLAYER::updata(int*select) {
+	if (isPress(KEY_W)) {
+		*select = STATE_RESULT;
+	}
 	if (BlinkCnt <= 0 || BlinkCnt-- / BlinkInterval % 2) {//“_–Å
 		Color.a = 1.0f;
 	}
@@ -66,12 +70,6 @@ void PLAYER::damege() {
 }
 void PLAYER::draw() {
 	drawImage(Img, Px, Py, Rad, Color);
-}
-void PLAYER::setPx(float px) {
-	Px = px;
-}
-void PLAYER::setPy(float py) {
-	Py = py;
 }
 float PLAYER::px() {
 	return Px;

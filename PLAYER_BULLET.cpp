@@ -13,7 +13,7 @@ void PLAYER_BULLET::init(CONTAINER* c) {
 	WindowHeight = (float)c->windowHeight;
 
 	//AlphaDecayVal = c->playerBulletAlphaDecayVal;
-	//SqDistance = pow(c->playerBulletCollisionDistance, 2);
+	SqDistance = pow(c->playerBulletDistance, 2);//“ñæ
 }
 void PLAYER_BULLET::appear(float px, float py, float rad) {
 	Color.a = 1.0f;
@@ -36,11 +36,9 @@ void PLAYER_BULLET::updata() {
 	int num = Targets->num();
 	for (int i = 0; i < num; i++) {
 		ENEMY* target = Targets->enemy(i); //ˆê‘Ì•ª‚ðŽæ‚è‚¾‚µ‚Ä‚¢‚é
-		float RightX = target->px() + 45;
-		float LeftX = target->px() - 45;
-		float TopY = target->py() - 64;
-		float BottomY = target->py() + 64;
-		if (RightX >= Px && LeftX <= Px && TopY <= Py && BottomY >= Py) {//“–‚½‚è”»’è
+		float x = target->px() - Px;
+		float y = target->py() - Py;
+		if (x * x + y * y <= SqDistance) {//“–‚½‚è”»’è
 			target->damage();//ENEMY‚Ö
 			break;
 		}

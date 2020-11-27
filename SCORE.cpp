@@ -1,5 +1,6 @@
 #include"CONTAINER.h"
 #include"SCORE.h"
+#include"ENEMY.h"
 void SCORE::init(CONTAINER* c) {
 	Img[0] = c->num[0].Img;
 	Img[1] = c->num[1].Img;
@@ -11,20 +12,26 @@ void SCORE::init(CONTAINER* c) {
 	Img[7] = c->num[7].Img;
 	Img[8] = c->num[8].Img;
 	Img[9] = c->num[9].Img;
-
+	
 	Px =c->numPx;
 	Py =c->numPy;
 	Color = c->numColor;
 }
 void SCORE::updata() {
-	
 }
 void SCORE::draw() {
-	int num = 0;
-	int truss = 10000;//Œ…‚Å‚í‚Á‚Ä‚¢‚­
+	int score = Point;//ENEMY‚©‚çƒXƒRƒA‚ª•Ô‚Á‚Ä‚­‚é
+	int truss = 10000;//truss(Œ…)‚Å‚í‚Á‚Ä‚¢‚­
 	for (int i = 0; i < 5;i++) {
-
-		drawImage(Img[num], Px+i*30, Py, Color);
+	    int num = score / truss;
+		drawImage(Img[num], Px+i*60, Py, Color);
+		score %= truss;
 		truss /= 10;
 	}
+}
+void SCORE::setPoint(int point) {//ENEMY‚Åƒ_ƒ[ƒWŽž‚É‚P‚O‚O‚ª‚©‚¦‚Á‚Ä‚«‚Ä{‚³‚ê‚é
+	Point += point;
+}
+int SCORE::point() {
+	return Point;
 }

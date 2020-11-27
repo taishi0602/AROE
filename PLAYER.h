@@ -5,11 +5,9 @@ class PLAYER_BULLETS;
 class PLAYER {
 public:
 	void init(CONTAINER* c);
-	void updata();
+	void updata(int*select);
 	void draw();
 	
-	void setPx(float px);
-	void setPy(float py);
 	float px();
 	float py();
 

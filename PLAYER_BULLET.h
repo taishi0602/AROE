@@ -22,7 +22,6 @@ private:
 	float WindowWidth = 0;
 	float WindowHeight = 0;
 
-	float AlphaDecayVal = 0;
 	float SqDistance = 0;
 	static ENEMIES* Targets;
 };

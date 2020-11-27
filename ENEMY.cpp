@@ -3,9 +3,11 @@
 #include"ENEMY.h"
 #include"ENEMY_BULLETS.h"
 #include"PLAYER.h"
+#include"SCORE.h"
 #include"input.h"
 ENEMY_BULLETS* ENEMY::Bullets = 0;
-int ENEMY::Idx = 1;
+SCORE* ENEMY::Point = 0;
+int ENEMY::Idx = 0;
 void ENEMY::init(CONTAINER*c) {
 	Img = c->enemy1_1.Img;
 	Px = c->enemy1_1.Px+Idx;
@@ -57,18 +59,13 @@ void ENEMY::updata(PLAYER*target) {
 void ENEMY::damage() {//ダメージ時の反応
 	Color.a = 0.0f;
 	Py = 1080 + 50;
+	Point->setPoint(100);//百ポイントをSCOREへ
 }
 void ENEMY::draw() {
 	drawImage(Img, Px, Py, Rad, Color);
 	drawImage(ImgW, Px, Py, RadW, Color);
 }
-//ENEMYの渡す座標セット
-void ENEMY::setPx(float px) {
-	Px = px;
-}
-void ENEMY::setPy(float py) {
-	Py = py;
-}
+//ENEMYの渡すセット
 float ENEMY::px() {
 	return Px;
 }

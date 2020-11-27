@@ -17,6 +17,7 @@ public:
 
 	DATA desertBack;
 	DATA ruinsBack;
+	DATA DR_Back;
 	DATA bossBack;
 	DATA scoreBack;
 	DATA num[10];
@@ -29,15 +30,16 @@ public:
 	DATA enemy1_3;
 	DATA enemyBullet;
 	DATA enemyWeapon;
-	CONTAINER() {//GAMEとSTARTで2回呼び出してしまっているので修正予定
-		//初期化
-		//initialize("Game", 1980, 1080);
+
+	DATA result;
+	CONTAINER() {
 		//画像データ
 		start.Img = loadImage("start.png");
 		startBotton.Img = loadImage("start_buttom.png");
 		startArow.Img = loadImage("yazirusi.png");
 
 		desertBack.Img = loadImage("backGround.jpg");
+		DR_Back.Img = loadImage("backGround1,5.jpg");
 		ruinsBack.Img = loadImage("backGround2.jpg");
 		bossBack.Img = loadImage("BossStage.jpg");
 		scoreBack.Img = loadImage("play_score.png");
@@ -50,19 +52,21 @@ public:
 
 		numberImg = loadImage("number0_9.png");//後で
 		num[0].Img = divideImage(numberImg, 0, 0, 100, 100);
-		num[1].Img = divideImage(numberImg, 100, 0, 200, 100);
-		num[2].Img = divideImage(numberImg, 200, 0, 300, 100);
-		num[3].Img = divideImage(numberImg, 300, 0, 400, 100);
-		num[4].Img = divideImage(numberImg, 400, 0, 500, 100);
-		num[5].Img = divideImage(numberImg, 500, 0, 600, 100);
-		num[6].Img = divideImage(numberImg, 600, 0, 700, 100);
-		num[7].Img = divideImage(numberImg, 700, 0, 800, 100);
-		num[8].Img = divideImage(numberImg, 800, 0, 900, 100);
-		num[9].Img = divideImage(numberImg, 900, 0, 1000, 100);
+		num[1].Img = divideImage(numberImg, 100, 0, 100, 100);
+		num[2].Img = divideImage(numberImg, 200, 0, 100, 100);
+		num[3].Img = divideImage(numberImg, 300, 0, 100, 100);
+		num[4].Img = divideImage(numberImg, 400, 0, 100, 100);
+		num[5].Img = divideImage(numberImg, 500, 0, 100, 100);
+		num[6].Img = divideImage(numberImg, 600, 0, 100, 100);
+		num[7].Img = divideImage(numberImg, 700, 0, 100, 100);
+		num[8].Img = divideImage(numberImg, 800, 0, 100, 100);
+		num[9].Img = divideImage(numberImg, 900, 0, 100, 100);
+
+		result.Img = loadImage("resultBack.png");
 
 		//座標　角度　データ
-        start.Px = 960;
-		start.Py = 540;
+        start.Px = 960.0f;
+		start.Py = 540.0f;
         startBotton.Px=960.0f;
 		startBotton.Py=900.0f;
 		startArow.Px = 810.0f;
@@ -70,6 +74,8 @@ public:
 
 		desertBack.Py = 540.0f;
 		desertBack.Px = 660.0f;
+		DR_Back.Py = 540.0f;
+		DR_Back.Px = 660.0f;
 		ruinsBack.Py = 540.0f;
 		ruinsBack.Px = 660.0f;
 		bossBack.Py = 540.0f;
@@ -85,6 +91,9 @@ public:
 		enemy1_2.Rad = 3.141592f / 180.0 * -120.0f;
 		enemy1_3.Px = 1220;
 		enemy1_3.Rad = 3.141592 / 180.0f * 120.0f;
+
+		result.Px = 960.0f;
+		result.Py = 540.0f;
 	}
 	//CONTAINER
 	const int windowWidth = 1320;
@@ -113,7 +122,7 @@ public:
 	const int playerBulletsNum = 30;
 	const int playerTriggerInterval = 10;
 	const float playerCorrectRad = 0.5;
-
+	const float playerBulletDistance = 45.0f;
 	//enemy1_1
 	const float enemySpeed = 3;
 	const COLOR enemyColor = COLOR(0.4f, 0.8f, 1.0f, 0.0f);
@@ -145,4 +154,10 @@ public:
 	const COLOR numColor = COLOR(0.0f, 1.0f, 0.0f, 1.0f);
 	const float numPx = 1400.0f;
 	const float numPy = 250.0f;
+
+	const float v2numPx = 780;
+	const float v2numPy = 600;
+
+	//const COLOR backColor = COLOR(0.4f, 0.8f, 1.0f, 1.0f);
+	const int back = 3;
 };

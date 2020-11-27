@@ -7,15 +7,14 @@ public:
 	void updata();
 	void draw();
 private:
+	friend class PLAY_BACKs;
+	static int idx;
 	int ImgS = 0;
-	int ImgB2 = 0;
-	int ImgB3 = 0;
-	int ImgB = 0;
-	float PyB = 0;
-	float PxB = 0;
-	float PyB2 = 0;
-	float PxB2 = 0;
-	float PyB3 = 0;
-	float PxB3 = 0;
+	int Img[4];
+	float Py = 0;
+	float Px = 0;
 	int timeCnt = 0;
+	int roopCnt = 0;
+	int i = 0;
+	COLOR Color;
 };

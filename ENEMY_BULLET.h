@@ -8,7 +8,9 @@ public:
 	void appear(float px,float py,float rad);
 	void updata();
 	void draw();
-	static void setTarget(PLAYER* target) { Target = target; }
+	static void setTarget(PLAYER* target) { 
+		Target = target; 
+	}
 private:
 	friend class ENEMY_BULLETS;
 	int Img = 0;

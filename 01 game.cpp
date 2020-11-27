@@ -4,13 +4,14 @@
 #include"GAME.h"
 #define STATE_TITLE 0
 #define STATE_PLAY 1
+#define STATE_FINISH 2
 
 //ゲーム処理エントリーポイント------------------------------------------------------------------
 void gmain(){
     initialize("Game", 1980, 1080);
     START* start = new START;
     GAME* game = new GAME;
-    int state=STATE_TITLE;
+    int state = STATE_TITLE;
 
     while( msgProc() ){
         switch (state) {
@@ -23,5 +24,5 @@ void gmain(){
         }
     }
     delete start;
-    //delete game;
+    delete game;
 }

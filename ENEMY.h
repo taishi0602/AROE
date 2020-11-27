@@ -3,14 +3,15 @@
 class CONTAINER;
 class PLAYER;
 class ENEMY_BULLETS;
+class SCORE;
 class ENEMY {
 public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
 	void draw();
 	static void setBullets(ENEMY_BULLETS* bullets) { Bullets = bullets; }
-	void setPx(float px);
-	void setPy(float py);
+	static void setPoint(SCORE* point) { Point = point; }
+	
 	float px();
 	float py();
 
@@ -26,10 +27,12 @@ private:
 	int TimeCnt = 0;
 	COLOR Color;
 	static ENEMY_BULLETS* Bullets;
+	static SCORE* Point;
 
 	int ImgW = 0;
 	float RadW;
 	int TriggerCnt = 0;
 	int TriggerInterval = 0;
 	float CorrectRad = 0;
+
 };

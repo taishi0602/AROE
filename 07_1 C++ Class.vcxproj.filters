@@ -13,7 +13,6 @@
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="ENEMY_BULLET.cpp" />
     <ClCompile Include="ENEMY_BULLETS.cpp" />
-    <ClCompile Include="ENEMY_W.cpp" />
     <ClCompile Include="ENEMY1_3.cpp" />
     <ClCompile Include="ENEMIES1_3.cpp" />
     <ClCompile Include="START.cpp" />
@@ -22,6 +21,8 @@
     <ClCompile Include="PLAYER_BULLET.cpp" />
     <ClCompile Include="PLAYER_BULLETS.cpp" />
     <ClCompile Include="SCORE.cpp" />
+    <ClCompile Include="RESULT.cpp" />
+    <ClCompile Include="PLAY_BACKs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
@@ -33,7 +34,6 @@
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="ENEMY_BULLET.h" />
     <ClInclude Include="ENEMY_BULLETS.h" />
-    <ClInclude Include="ENEMY_W.h" />
     <ClInclude Include="ENEMY1_3.h" />
     <ClInclude Include="ENEMIES1_3.h" />
     <ClInclude Include="START.h" />
@@ -42,5 +42,7 @@
     <ClInclude Include="PLAYER_BULLET.h" />
     <ClInclude Include="PLAYER_BULLETS.h" />
     <ClInclude Include="SCORE.h" />
+    <ClInclude Include="RESULT.h" />
+    <ClInclude Include="PLAY_BACKs.h" />
   </ItemGroup>
 </Project>
