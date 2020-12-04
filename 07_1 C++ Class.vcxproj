@@ -167,13 +167,10 @@
   <ItemGroup>
     <ClCompile Include="01 game.cpp" />
     <ClCompile Include="ENEMIES.cpp" />
-    <ClCompile Include="ENEMIES1_2.cpp" />
-    <ClCompile Include="ENEMIES1_3.cpp" />
     <ClCompile Include="ENEMY.cpp" />
-    <ClCompile Include="ENEMY1_2.cpp" />
-    <ClCompile Include="ENEMY1_3.cpp" />
     <ClCompile Include="ENEMY_BULLET.cpp" />
     <ClCompile Include="ENEMY_BULLETS.cpp" />
+    <ClCompile Include="ENEMY_ENCOUNT.cpp" />
     <ClCompile Include="GAME.cpp" />
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="PLAYER_BULLET.cpp" />
@@ -191,13 +188,10 @@
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
     <ClInclude Include="ENEMIES.h" />
-    <ClInclude Include="ENEMIES1_2.h" />
-    <ClInclude Include="ENEMIES1_3.h" />
     <ClInclude Include="ENEMY.h" />
-    <ClInclude Include="ENEMY1_2.h" />
-    <ClInclude Include="ENEMY1_3.h" />
     <ClInclude Include="ENEMY_BULLET.h" />
     <ClInclude Include="ENEMY_BULLETS.h" />
+    <ClInclude Include="ENEMY_ENCOUNT.h" />
     <ClInclude Include="GAME.h" />
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="PLAYER_BULLET.h" />

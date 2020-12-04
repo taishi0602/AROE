@@ -4,6 +4,7 @@
 #include"ENEMIES.h"
 
 ENEMIES* PLAYER_BULLET::Targets = 0;//“–‚½‚è”»’èŒn
+ENEMIES1_2* PLAYER_BULLET::Targets2 = 0;
 
 void PLAYER_BULLET::init(CONTAINER* c) {
 	Img = c->playerBullet.Img;

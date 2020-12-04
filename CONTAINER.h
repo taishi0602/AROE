@@ -25,9 +25,7 @@ public:
 
 	DATA player;
 	DATA playerBullet;
-	DATA enemy1_1;
-	DATA enemy1_2;
-	DATA enemy1_3;
+	DATA enemy1;
 	DATA enemyBullet;
 	DATA enemyWeapon;
 
@@ -38,7 +36,7 @@ public:
 		startBotton.Img = loadImage("start_buttom.png");
 		startArow.Img = loadImage("yazirusi.png");
 
-		desertBack.Img = loadImage("backGround.jpg");
+		desertBack.Img = loadImage("backGround.png");
 		DR_Back.Img = loadImage("backGround1,5.jpg");
 		ruinsBack.Img = loadImage("backGround2.jpg");
 		bossBack.Img = loadImage("BossStage.jpg");
@@ -46,7 +44,7 @@ public:
 
 		player.Img = loadImage("heart.png");
 		playerBullet.Img = loadImage("heartSmall.png");
-		enemy1_1.Img=loadImage("zako_1.png");
+		enemy1.Img=loadImage("zako_1.png");
 		enemyWeapon.Img = loadImage("weapon_1.png");
 		enemyBullet.Img = loadImage("zakodann1.png");
 
@@ -74,23 +72,9 @@ public:
 
 		desertBack.Py = 540.0f;
 		desertBack.Px = 660.0f;
-		DR_Back.Py = 540.0f;
-		DR_Back.Px = 660.0f;
-		ruinsBack.Py = 540.0f;
-		ruinsBack.Px = 660.0f;
-		bossBack.Py = 540.0f;
-		bossBack.Px = 660.0f;
 
 		player.Px = 660.0f;
 		player.Py = 900.0f;
-		enemy1_1.Px = windowCenterX - 110;
-		enemy1_1.Py = 1145;
-        enemy1_1.Rad = 0;
-		enemy1_2.Px = 100;
-		enemy1_2.Py = -50;
-		enemy1_2.Rad = 3.141592f / 180.0 * -120.0f;
-		enemy1_3.Px = 1220;
-		enemy1_3.Rad = 3.141592 / 180.0f * 120.0f;
 
 		result.Px = 960.0f;
 		result.Py = 540.0f;
@@ -123,23 +107,15 @@ public:
 	const int playerTriggerInterval = 10;
 	const float playerCorrectRad = 0.5;
 	const float playerBulletDistance = 45.0f;
-	//enemy1_1
+	//enemy1
 	const float enemySpeed = 3;
 	const COLOR enemyColor = COLOR(0.4f, 0.8f, 1.0f, 0.0f);
-
-	//enemy1_2
-	const float enemy1_2Speed = 3;
-	const COLOR enemy1_2Color = COLOR(0.4f, 0.8f, 1.0f, 0.0f);
-	//enemy1_3
-
 	//enemies
-	int enemiesNum = 3;
-	int enemies1_2Num = 3;
-	int enemies1_3Num = 3;
+	int enemiesNum = 9;
 	//“G’e
 	//int enemyBulletImg = 0;
 	const COLOR enemyBulletColor = COLOR(1.0f, 0.7f, 0.7f, 0.0f);
-	const float enemyBulletAdvSpeed = 20.0f;
+	const float enemyBulletAdvSpeed = 17.0f;
 	const int enemyBulletsNum = 30;
 	const int enemyTriggerInterval = 10;
 	const float enemyCorrectRad = 0.5;
@@ -158,6 +134,5 @@ public:
 	const float v2numPx = 780;
 	const float v2numPy = 600;
 
-	//const COLOR backColor = COLOR(0.4f, 0.8f, 1.0f, 1.0f);
 	const int back = 3;
 };

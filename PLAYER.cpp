@@ -2,7 +2,9 @@
 #include"PLAYER.h"
 #include"PLAYER_BULLETS.h"
 #include"input.h"
-#define STATE_RESULT 1
+enum a {
+	Result=1
+};
 PLAYER_BULLETS* PLAYER::Bullets = 0;
 void PLAYER::init(CONTAINER*c) {
 	Img = c->player.Img;
@@ -16,7 +18,7 @@ void PLAYER::init(CONTAINER*c) {
 }
 void PLAYER::updata(int*select) {
 	if (isPress(KEY_W)) {
-		*select = STATE_RESULT;
+		*select = Result;
 	}
 	if (BlinkCnt <= 0 || BlinkCnt-- / BlinkInterval % 2) {//“_–Å
 		Color.a = 1.0f;

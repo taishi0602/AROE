@@ -11,12 +11,7 @@ void PLAY_BACK::init(CONTAINER* c) {
 	ImgS = c->scoreBack.Img;
 	Py = c->desertBack.Py+idx;
 	Px = c->desertBack.Px;
-	//Color = c->backColor;
 	idx -= 1080;
-	//PyB2 = c->ruinsBack.Py;
-	//PxB2 = c->ruinsBack.Px;
-	//PyB3 = c->bossBack.Py;
-	//PxB3 = c->bossBack.Px;
 
 }
 void PLAY_BACK::updata() {

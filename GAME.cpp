@@ -1,9 +1,8 @@
 #include"CONTAINER.h"
 #include"PLAYER.h"
 #include"PLAY_BACKs.h"
-#include"ENEMIES.h"
-#include"ENEMIES1_2.h"
-#include"ENEMIES1_3.h"
+#include"ENEMIES.h"//敵１達
+#include"ENEMY_ENCOUNT.h"//敵の出現
 #include"ENEMY_BULLETS.h"
 #include"ENEMY_BULLET.h"
 #include"PLAYER_BULLETS.h"
@@ -13,40 +12,39 @@
 #include"input.h"
 #include"RESULT.h"
 #include"windows.h"
-#define STATE_MAIN 0
-#define STATE_RESULT 1
+enum constitute {//整数上から自動割り当て
+	gameMain,
+	gameResult
+};
 GAME::GAME(){
-MessageBox(0, "やあ", "", 0);
+//MessageBox(0, "始まり", "", 0);
 C = new CONTAINER;
 Player = new PLAYER;
 PlayBacks = new PLAY_BACKs(C);
 Enemies = new ENEMIES(C);
-Enemies1_2 = new ENEMIES1_2(C);
-Enemies1_3 = new ENEMIES1_3(C);
+EnemyEncount = new ENEMY_ENCOUNT();
 EnemyBullets = new ENEMY_BULLETS(C);
 PlayerBullets = new PLAYER_BULLETS(C);
 Score = new SCORE;
 Result = new RESULT;
 ENEMY::setBullets(EnemyBullets);
 ENEMY::setPoint(Score);
-ENEMY1_2::setBullets(EnemyBullets);
-ENEMY1_3::setBullets(EnemyBullets);
+ENEMY_ENCOUNT::setColor(Enemies);//エネミーエンカウントでEnemiesのカラーを手に入れる
 PLAYER::setBullets(PlayerBullets);
 PLAYER_BULLET::setTargets(Enemies);//自機弾は敵の情報をゲット
+PLAYER_BULLET::setTargets(Enemies1_2);
 ENEMY_BULLET::setTarget(Player);
 RESULT::setTarget(Score);
 Player->init(C);
 PlayBacks->init(C);
 Enemies->init(C);
-Enemies1_2->init(C);
-Enemies1_3->init(C);
 EnemyBullets->init(C);
 PlayerBullets->init(C);
 Score->init(C);
 Result->init(C);
 }
 GAME::~GAME() {
-	MessageBox(0, "ひん", "", 0);
+	//MessageBox(0, "デリート", "", 0);
 	delete Player;
 	delete PlayBacks;
 	delete Enemies;
@@ -61,12 +59,11 @@ void GAME::proc() {
 	//動き
 	getInput();
 	switch (select) {
-	case STATE_MAIN:
+	case gameMain:
 	Player->updata(&select);
 	PlayBacks->updata();
 	Enemies->updata(Player);
-	Enemies1_2->updata(Player);
-	Enemies1_3->updata(Player);
+	EnemyEncount->updata();//敵出現
 	EnemyBullets->updata();
 	PlayerBullets->updata();
 	Score->updata();
@@ -77,12 +74,10 @@ void GAME::proc() {
 	EnemyBullets->draw();
 	PlayerBullets->draw();
 	Enemies->draw();
-	Enemies1_2->draw();
-	Enemies1_3->draw();
 	Score->draw();
     present();
 	break;
-	case STATE_RESULT:
+	case gameResult:
 	Result->updata();
 	clearTarget();
 	Result->draw();

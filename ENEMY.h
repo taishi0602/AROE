@@ -11,14 +11,12 @@ public:
 	void draw();
 	static void setBullets(ENEMY_BULLETS* bullets) { Bullets = bullets; }
 	static void setPoint(SCORE* point) { Point = point; }
-	
 	float px();
 	float py();
-
 	void damage();
 private:
-	static int Idx;
-	int Img = 0;
+	friend class ENEMIES;
+	int Img[2];
 	float Px = 0;
 	float Py = 0;
 	float Rad = 0;

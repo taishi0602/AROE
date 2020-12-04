@@ -2,23 +2,24 @@
 #include "window.h"
 #include"START.h"
 #include"GAME.h"
-#define STATE_TITLE 0
-#define STATE_PLAY 1
-#define STATE_FINISH 2
+enum constitute {
+    Title,
+    Play
+};
 
 //ゲーム処理エントリーポイント------------------------------------------------------------------
 void gmain(){
     initialize("Game", 1980, 1080);
     START* start = new START;
     GAME* game = new GAME;
-    int state = STATE_TITLE;
+    int state = Title;
 
     while( msgProc() ){
         switch (state) {
-        case STATE_TITLE://スタート画面
+        case Title://スタート画面
             start->proc(&state);
             break;
-        case STATE_PLAY://本編
+        case Play://本編
             game->proc();
             break;
         }

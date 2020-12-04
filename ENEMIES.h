@@ -8,9 +8,13 @@ public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
 	void draw();
+	void setColor1(float color);
+	void setColor2(float color);
+	void setColor3(float color);
 	int num();//GetterŠÖ”
 	ENEMY* enemy(int i);//GetterŠÖ”
 private:
 	int Num = 0;//”z—ñ
 	ENEMY* Enemy = 0;//”z—ñ
+	int Cnt=0;
 };
