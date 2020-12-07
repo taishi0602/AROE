@@ -42,8 +42,8 @@ public:
 		bossBack.Img = loadImage("BossStage.jpg");
 		scoreBack.Img = loadImage("play_score.png");
 
-		player.Img = loadImage("heart.png");
-		playerBullet.Img = loadImage("heartSmall.png");
+		player.Img = loadImage("jiki.png");
+		playerBullet.Img = loadImage("jiki_tama.png");
 		enemy1.Img=loadImage("zako_1.png");
 		enemyWeapon.Img = loadImage("weapon_1.png");
 		enemyBullet.Img = loadImage("zakodann1.png");
@@ -96,7 +96,7 @@ public:
 	//ƒvƒŒƒC’†”wŒi‰æ‘œ
 
 	//Ž©‹@
-	const COLOR playerColor = COLOR(1.0f,0.0f,0.0f,1.0f);
+	const COLOR playerColor = COLOR(1.0f,1.0f,1.0f,1.0f);
 	const int playerBlinkInterval = 5;
 	const int playerBlinkNumFrames = 60;
 
