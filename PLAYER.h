@@ -13,6 +13,7 @@ public:
 
 	void damege();
 	bool isAttackable();
+
 	static void setBullets(PLAYER_BULLETS* bullets) { Bullets = bullets; }
 
 

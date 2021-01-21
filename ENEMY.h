@@ -1,36 +1,28 @@
 #pragma once
 #include"COLOR.h"
+#include"CHARA.h"
 class CONTAINER;
 class PLAYER;
 class ENEMY_BULLETS;
 class SCORE;
-class ENEMY {
+class ENEMY:public CHARA{
 public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
-	void draw();
+	void damage();
 	static void setBullets(ENEMY_BULLETS* bullets) { Bullets = bullets; }
 	static void setPoint(SCORE* point) { Point = point; }
-	float px();
-	float py();
-	void damage();
-private:
-	friend class ENEMIES;
-	int Img[2];
-	float Px = 0;
-	float Py = 0;
-	float Rad = 0;
-	float Speed = 0;
-	int Cnt = 0;
-	int TimeCnt = 0;
-	COLOR Color;
 	static ENEMY_BULLETS* Bullets;
 	static SCORE* Point;
-
-	int ImgW = 0;
-	float RadW;
-	int TriggerCnt = 0;
-	int TriggerInterval = 0;
-	float CorrectRad = 0;
-
 };
+class ENEMY2 :public CHARA {
+public:
+	void init(CONTAINER* c);
+	void updata(PLAYER* target);
+	void damage();
+	static void setBullets(ENEMY_BULLETS* bullets) { Bullets = bullets; }
+	static void setPoint(SCORE* point) { Point = point; }
+	static ENEMY_BULLETS* Bullets;
+	static SCORE* Point;
+};
+

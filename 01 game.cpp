@@ -1,5 +1,6 @@
 #include"framework.h"
 #include "window.h"
+#include"CONTAINER.h"
 #include"START.h"
 #include"GAME.h"
 enum constitute {
@@ -13,7 +14,6 @@ void gmain(){
     START* start = new START;
     GAME* game = new GAME;
     int state = Title;
-
     while( msgProc() ){
         switch (state) {
         case Title://スタート画面

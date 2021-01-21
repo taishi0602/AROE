@@ -7,7 +7,8 @@ void ENEMY_ENCOUNT::updata() {
 		gameCnt = 0;
 	}
 	if (encountTime == 5&&gameCnt==0) {
-		Enemies->setColor1(1.0f);//スイッチ
+		Enemies->setColor2(1.0f);//スイッチ
+		Enemies->setColor4(1.0f);
 		
 	}
 	if (encountTime == 10&&gameCnt==0) {

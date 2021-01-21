@@ -7,8 +7,6 @@ class PLAY_BACKs;
 class PLAYER;
 class ENEMIES;
 class ENEMY_ENCOUNT;
-class ENEMIES1_2;
-class ENEMIES1_3;
 class ENEMY_BULLETS;
 class PLAYER_BULLETS;
 class SCORE;
@@ -24,8 +22,6 @@ private:
 	PLAY_BACKs* PlayBacks = 0;
 	ENEMIES* Enemies = 0;
 	ENEMY_ENCOUNT* EnemyEncount = 0;
-	ENEMIES1_2* Enemies1_2 = 0;
-	ENEMIES1_3* Enemies1_3 = 0;
 	ENEMY_BULLETS* EnemyBullets = 0;
 	PLAYER_BULLETS* PlayerBullets = 0;
 	SCORE* Score = 0;

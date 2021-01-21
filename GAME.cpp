@@ -29,11 +29,13 @@ Score = new SCORE;
 Result = new RESULT;
 ENEMY::setBullets(EnemyBullets);
 ENEMY::setPoint(Score);
+ENEMY2::setBullets(EnemyBullets);
+ENEMY2::setPoint(Score);
 ENEMY_ENCOUNT::setColor(Enemies);//エネミーエンカウントでEnemiesのカラーを手に入れる
 PLAYER::setBullets(PlayerBullets);
 PLAYER_BULLET::setTargets(Enemies);//自機弾は敵の情報をゲット
-PLAYER_BULLET::setTargets(Enemies1_2);
 ENEMY_BULLET::setTarget(Player);
+ENEMY_BULLET2::setTarget(Player);
 RESULT::setTarget(Score);
 Player->init(C);
 PlayBacks->init(C);
@@ -48,8 +50,6 @@ GAME::~GAME() {
 	delete Player;
 	delete PlayBacks;
 	delete Enemies;
-	delete Enemies1_2;
-	delete Enemies1_3;
 	delete EnemyBullets;
 	delete PlayerBullets;
 	delete Score;

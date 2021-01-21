@@ -3,10 +3,10 @@
 #include"ENEMY_BULLET.h"
 #include"PLAYER.h"
 
-PLAYER* ENEMY_BULLET::Target = 0;//“–‚½‚è”»’èŒn
+PLAYER* ENEMY_BULLET2::Target = 0;//“–‚½‚è”»’èŒn
 
-void ENEMY_BULLET::init(CONTAINER* c) {
-	Img = c->enemyBullet.Img;
+void ENEMY_BULLET2::init(CONTAINER* c) {
+	Img = c->enemyBullet2.Img;
 	Color = c->enemyBulletColor;
 	AdvSpeed = c->enemyBulletAdvSpeed;
 	WindowWidth = (float)c->windowWidth;
@@ -14,7 +14,7 @@ void ENEMY_BULLET::init(CONTAINER* c) {
 
 	AlphaDecayVal = c->enemyBulletAlphaDecayVal;
 }
-void ENEMY_BULLET::updata() {
+void ENEMY_BULLET2::updata() {
 	if (Color.a < 1.0f) {
 		Color.a -= AlphaDecayVal;
 		return;

@@ -29,7 +29,7 @@ void SCORE::draw() {
 		truss /= 10;
 	}
 }
-void SCORE::setPoint(int point) {//ENEMYでダメージ時に１００がかえってきて＋される
+void SCORE::setPoint(int point) {//敵からダメージ時ポイントがかえってきて＋される
 	Point += point;
 }
 int SCORE::point() {

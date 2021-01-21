@@ -26,8 +26,12 @@ public:
 	DATA player;
 	DATA playerBullet;
 	DATA enemy1;
+	DATA enemy2;
 	DATA enemyBullet;
+	DATA enemyBullet2;
 	DATA enemyWeapon;
+	DATA enemyWeapon2;
+
 
 	DATA result;
 	CONTAINER() {
@@ -45,8 +49,12 @@ public:
 		player.Img = loadImage("jiki.png");
 		playerBullet.Img = loadImage("jiki_tama.png");
 		enemy1.Img=loadImage("zako_1.png");
+		enemy2.Img = loadImage("zako_2.png");
 		enemyWeapon.Img = loadImage("weapon_1.png");
+		enemyWeapon2.Img = loadImage("weapon_2.png");
 		enemyBullet.Img = loadImage("zakodann1.png");
+		enemyBullet2.Img = loadImage("zakodann2.png");
+
 
 		numberImg = loadImage("number0_9.png");//後で
 		num[0].Img = divideImage(numberImg, 0, 0, 100, 100);
@@ -80,21 +88,12 @@ public:
 		result.Py = 540.0f;
 	}
 	//CONTAINER
-	const int windowWidth = 1320;
-	const int windowHeight = 1080;
-	const float windowCenterX = windowWidth / 2.0f;
-	const float windowCenterY = windowHeight / 2.0f;
+	const int windowWidth = 1320;//プレイ画面での端までにあたる
+	const int windowHeight = 1080;//画面縦の長さ
+	const float windowCenterX = windowWidth / 2.0f;//プレイ画面中央である
+	const float windowCenterY = windowHeight / 2.0f;//縦画面の中央
 	const int windowTop = 0;
 	const int windowBottom = windowHeight;
-	//スタートイメージ
-	//int startImg = 0;//スタート画面背景
-	
-	//int start2Img = 0;//スタート画面Startロゴ
-	
-	//int start3Img = 0;//スタート画面矢印画像
-	
-	//プレイ中背景画像
-
 	//自機
 	const COLOR playerColor = COLOR(1.0f,1.0f,1.0f,1.0f);
 	const int playerBlinkInterval = 5;
@@ -110,14 +109,17 @@ public:
 	//enemy1
 	const float enemySpeed = 3;
 	const COLOR enemyColor = COLOR(0.4f, 0.8f, 1.0f, 0.0f);
+	const COLOR enemyColor2 = COLOR(1.0f, 1.0f, 1.0f, 0.0f);
 	//enemies
 	int enemiesNum = 9;
+	int enemiesNum2 = 3;
 	//敵弾
 	//int enemyBulletImg = 0;
 	const COLOR enemyBulletColor = COLOR(1.0f, 0.7f, 0.7f, 0.0f);
 	const float enemyBulletAdvSpeed = 17.0f;
 	const int enemyBulletsNum = 30;
 	const int enemyTriggerInterval = 10;
+	const int enemyTriggerInterval2 = 5;
 	const float enemyCorrectRad = 0.5;
 	const float enemyBulletAlphaDecayVal = 1.0f / 10;
 	//enemyWepon

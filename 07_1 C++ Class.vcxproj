@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -166,9 +166,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01 game.cpp" />
+    <ClCompile Include="BULLET.cpp" />
+    <ClCompile Include="CHARA.cpp" />
     <ClCompile Include="ENEMIES.cpp" />
     <ClCompile Include="ENEMY.cpp" />
+    <ClCompile Include="ENEMY2.cpp" />
     <ClCompile Include="ENEMY_BULLET.cpp" />
+    <ClCompile Include="ENEMY_BULLET2.cpp" />
     <ClCompile Include="ENEMY_BULLETS.cpp" />
     <ClCompile Include="ENEMY_ENCOUNT.cpp" />
     <ClCompile Include="GAME.cpp" />
@@ -186,6 +190,8 @@
     <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BULLET.h" />
+    <ClInclude Include="CHARA.h" />
     <ClInclude Include="CONTAINER.h" />
     <ClInclude Include="ENEMIES.h" />
     <ClInclude Include="ENEMY.h" />

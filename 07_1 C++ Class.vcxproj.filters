@@ -20,6 +20,10 @@
     <ClCompile Include="RESULT.cpp" />
     <ClCompile Include="PLAY_BACKs.cpp" />
     <ClCompile Include="ENEMY_ENCOUNT.cpp" />
+    <ClCompile Include="CHARA.cpp" />
+    <ClCompile Include="ENEMY2.cpp" />
+    <ClCompile Include="BULLET.cpp" />
+    <ClCompile Include="ENEMY_BULLET2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
@@ -38,5 +42,7 @@
     <ClInclude Include="RESULT.h" />
     <ClInclude Include="PLAY_BACKs.h" />
     <ClInclude Include="ENEMY_ENCOUNT.h" />
+    <ClInclude Include="CHARA.h" />
+    <ClInclude Include="BULLET.h" />
   </ItemGroup>
 </Project>

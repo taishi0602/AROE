@@ -4,7 +4,6 @@
 #include"ENEMIES.h"
 
 ENEMIES* PLAYER_BULLET::Targets = 0;//“–‚½‚è”»’èŒn
-ENEMIES1_2* PLAYER_BULLET::Targets2 = 0;
 
 void PLAYER_BULLET::init(CONTAINER* c) {
 	Img = c->playerBullet.Img;
@@ -37,6 +36,16 @@ void PLAYER_BULLET::updata() {
 	int num = Targets->num();
 	for (int i = 0; i < num; i++) {
 		ENEMY* target = Targets->enemy(i); //ˆê‘Ì•ª‚ðŽæ‚è‚¾‚µ‚Ä‚¢‚é
+		float x = target->px() - Px;
+		float y = target->py() - Py;
+		if (x * x + y * y <= SqDistance) {//“–‚½‚è”»’è
+			target->damage();//ENEMY‚Ö
+			break;
+		}
+	}
+	int num2 = Targets->num2();
+	for (int i = 0; i < num2; i++) {
+		ENEMY2* target = Targets->enemy2(i); //ˆê‘Ì•ª‚ðŽæ‚è‚¾‚µ‚Ä‚¢‚é
 		float x = target->px() - Px;
 		float y = target->py() - Py;
 		if (x * x + y * y <= SqDistance) {//“–‚½‚è”»’è
