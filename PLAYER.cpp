@@ -3,7 +3,7 @@
 #include"PLAYER_BULLETS.h"
 #include"input.h"
 enum a {
-	Result=1
+	Title
 };
 PLAYER_BULLETS* PLAYER::Bullets = 0;
 void PLAYER::init(CONTAINER*c) {
@@ -15,10 +15,11 @@ void PLAYER::init(CONTAINER*c) {
 
 	BlinkNumFrames = c->playerBlinkNumFrames;
 	BlinkInterval = c->playerBlinkInterval;
+	CorrectRad = c->playerCorrectRad;
 }
-void PLAYER::updata(int*select) {
-	if (isPress(KEY_W)) {
-		*select = Result;
+void PLAYER::updata(int*state) {
+	if (isTrigger(KEY_C)) {
+		*state = Title;
 	}
 	if (BlinkCnt <= 0 || BlinkCnt-- / BlinkInterval % 2) {//“_–Å
 		Color.a = 1.0f;
@@ -53,9 +54,6 @@ void PLAYER::updata(int*select) {
 	if (isPress(KEY_Z)) {
 		if (TriggerCnt++ % TriggerInterval == 0) {
 			Bullets->appear(Px, Py, Rad);
-			//Bullets->appear(Px, Py, Rad + CorrectRad);
-			//Bullets->appear(Px, Py, Rad - CorrectRad);
-
 		}
 	}
 }
@@ -72,6 +70,7 @@ void PLAYER::damege() {
 }
 void PLAYER::draw() {
 	drawImage(Img, Px, Py, Rad, Color);
+
 }
 float PLAYER::px() {
 	return Px;

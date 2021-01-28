@@ -9,12 +9,7 @@ public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
 	void draw();
-	void setColor1(float color);
-	void setColor2(float color);
-	void setColor3(float color);
-	void setColor4(float color);
-	void setColor5(float color);
-	void setColor6(float color);
+	void Encount(int enemy);
 
 
 	int num();//Getterä÷êî

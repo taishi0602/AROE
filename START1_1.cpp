@@ -12,6 +12,9 @@ void START1_1::init(CONTAINER*c) {
 	Img3 = c->startArow.Img;
 	Px3 = c->startArow.Px;
 	Py3 = c->startArow.Py;
+
+	BlinkStart = 0;
+	BlinkCnt = 120;
 }
 void START1_1::updata(int*state) {
 	if(isTrigger(KEY_Z)&&BlinkStart==0){
@@ -28,6 +31,8 @@ void START1_1::updata(int*state) {
 	}
 	if (BlinkCnt <= 0) {
 		*state = STATE_PLAY;
+		BlinkStart=0;
+		BlinkCnt = 120;
 	}
 
 }

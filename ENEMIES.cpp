@@ -103,28 +103,34 @@ ENEMY* ENEMIES::enemy(int i) {
 ENEMY2* ENEMIES::enemy2(int i) {
 	return Enemy2 + i;
 }
-void ENEMIES::setColor1(float color) {
-	for (int i = 0; i < 3; i++) {
-		Enemy[i].Color.a = color;
+void ENEMIES::Encount(int enemy) {//Ží—Þ‚ð“n‚³‚ê‚é
+	if (enemy == 1) {//Wave1
+		for (int i = 3; i < 9; i++) {
+			Enemy[i].Color.a = 1.0f;
+		}
 	}
-}
-void ENEMIES::setColor2(float color) {
-	for (int i = 3; i < 6; i++) {
-		Enemy[i].Color.a = color;
+	if (enemy == 2) {
+		for (int i = 0; i < 3; i++) {
+			Enemy[i].Color.a = 1.0f;
+		}
+		Enemy2[0].Color.a = 1.0f;
+		Enemy2[2].Color.a = 1.0f;
 	}
-}
-void ENEMIES::setColor3(float color) {
-	for (int i = 6; i < 9; i++) {
-		Enemy[i].Color.a = color;
+	if (enemy == 3) {
+		for (int i = 0; i < 3; i++) {
+			Enemy[i].Color.a = 1.0f;
+		}
+		Enemy2[0].Color.a = 1.0f;
+		Enemy2[1].Color.a = 1.0f;
 	}
-}
-void ENEMIES::setColor4(float color) {
-	Enemy2[0].Color.a = color;
-}
-void ENEMIES::setColor5(float color) {
-	Enemy2[1].Color.a = color;
-}
-void ENEMIES::setColor6(float color) {
-	Enemy2[2].Color.a = color;
+	if (enemy == 4) {
+		Enemy2[0].Color.a = 1.0f;
+	}
+	if (enemy == 4) {
+		Enemy2[1].Color.a = 1.0f;
+	}
+	if (enemy == 4) {
+		Enemy2[2].Color.a = 1.0f;
+	}
 }
 

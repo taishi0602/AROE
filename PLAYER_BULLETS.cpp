@@ -15,7 +15,7 @@ void PLAYER_BULLETS::init(CONTAINER* c) {
 }
 void PLAYER_BULLETS::appear(float px, float py, float rad) {
 	for (int i = 0; i < Num; i++) {
-		if (Bullet[i].Color.a <= 0.0f) {
+		if (Bullet[i].Color.a == 0.0f) {
 			Bullet[i].appear(px, py, rad);
 			break;
 		}

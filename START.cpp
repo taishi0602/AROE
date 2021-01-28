@@ -16,6 +16,5 @@ void START::proc(int* state) {
 	Start->updata(state);
 	clearTarget();
 	Start->draw();
-
 	present();
 }

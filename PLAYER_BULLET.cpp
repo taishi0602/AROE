@@ -12,7 +12,6 @@ void PLAYER_BULLET::init(CONTAINER* c) {
 	WindowWidth = (float)c->windowWidth;
 	WindowHeight = (float)c->windowHeight;
 
-	//AlphaDecayVal = c->playerBulletAlphaDecayVal;
 	SqDistance = pow(c->playerBulletDistance, 2);//“ñæ
 }
 void PLAYER_BULLET::appear(float px, float py, float rad) {

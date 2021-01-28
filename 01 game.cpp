@@ -20,7 +20,7 @@ void gmain(){
             start->proc(&state);
             break;
         case Play://–{•Ò
-            game->proc();
+            game->proc(&state);
             break;
         }
     }

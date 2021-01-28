@@ -14,7 +14,7 @@
 #include"windows.h"
 enum constitute {//®”ã‚©‚çŽ©“®Š„‚è“–‚Ä
 	gameMain,
-	gameResult
+	gameResult,
 };
 GAME::GAME(){
 //MessageBox(0, "Žn‚Ü‚è", "", 0);
@@ -55,12 +55,13 @@ GAME::~GAME() {
 	delete Score;
 	delete Result;
 }
-void GAME::proc() {
+void GAME::proc(int*state) {
 	//“®‚«
 	getInput();
 	switch (select) {
+
 	case gameMain:
-	Player->updata(&select);
+	Player->updata(state);
 	PlayBacks->updata();
 	Enemies->updata(Player);
 	EnemyEncount->updata();//“GoŒ»
@@ -77,6 +78,7 @@ void GAME::proc() {
 	Score->draw();
     present();
 	break;
+	
 	case gameResult:
 	Result->updata();
 	clearTarget();

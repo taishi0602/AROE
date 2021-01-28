@@ -15,7 +15,7 @@ class GAME {
 public:
 	GAME();
 	~GAME();
-	void proc();
+	void proc(int*state);
 private:
 	CONTAINER* C = 0;
 	PLAYER* Player = 0;
