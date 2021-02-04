@@ -1,0 +1,12 @@
+7
+startPx 960
+startPy 540
+playerPx 660
+playerPy 900
+playerRad 0
+playerSpeed 4
+playerBlinkNumFrames 60
+playerBlinkInterval 5
+playerTriggerInterval 10
+playerTriggerCnt 5
+playerCorrectRad 0.5f

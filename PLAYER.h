@@ -23,13 +23,16 @@ private:
 	float Py = 0;
 	float Rad = 0;
 	float Speed = 0;
-    int TriggerInterval = 0;
-	int TriggerCnt = 0;
-	int CorrectRad = 0;
-
-	int BlinkCnt = 0;
-	int BlinkInterval = 0;
 	int BlinkNumFrames = 0;
+    int BlinkInterval = 0;
+
+	int TriggerInterval = 0;
+	int TriggerCnt = 0;
+    
+	int CorrectRad = 0;
+	int BlinkCnt = 0;
+	
+	
 
 	static PLAYER_BULLETS* Bullets;
 

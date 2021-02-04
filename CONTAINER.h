@@ -4,36 +4,41 @@
 #include"graphic.h"
 
 class CONTAINER {
+	class DATA* Data = 0;
+	int NumData = 0;
 public:
-	struct DATA {
+	~CONTAINER();
+	int loadData(const char* filename);
+	float fData(const char* name);
+	int iData(const char* name);
+
+	struct DATA2 {
 		int Img = 0;
-	    float Px = 0;
-		float Py = 0;
-		float Rad = 0;
+		COLOR color;
 	};
-	DATA start;
-	DATA startBotton;
-	DATA startArow;
+	DATA2 start;
+	DATA2 startBotton;
+	DATA2 startArow;
 
-	DATA desertBack;
-	DATA ruinsBack;
-	DATA DR_Back;
-	DATA bossBack;
-	DATA scoreBack;
-	DATA num[10];
-
-
-	DATA player;
-	DATA playerBullet;
-	DATA enemy1;
-	DATA enemy2;
-	DATA enemyBullet;
-	DATA enemyBullet2;
-	DATA enemyWeapon;
-	DATA enemyWeapon2;
+	DATA2 desertBack;
+	DATA2 ruinsBack;
+	DATA2 DR_Back;
+	DATA2 bossBack;
+	DATA2 scoreBack;
+	DATA2 num[10];
 
 
-	DATA result;
+	DATA2 player;
+	DATA2 playerBullet;
+	DATA2 enemy1;
+	DATA2 enemy2;
+	DATA2 enemyBullet;
+	DATA2 enemyBullet2;
+	DATA2 enemyWeapon;
+	DATA2 enemyWeapon2;
+
+
+	DATA2 result;
 	CONTAINER() {
 		//âÊëúÉfÅ[É^
 		start.Img = loadImage("start.png");
@@ -80,9 +85,6 @@ public:
 
 		desertBack.Py = 540.0f;
 		desertBack.Px = 660.0f;
-
-		player.Px = 660.0f;
-		player.Py = 900.0f;
 
 		result.Px = 960.0f;
 		result.Py = 540.0f;

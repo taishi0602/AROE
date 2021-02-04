@@ -168,6 +168,8 @@
     <ClCompile Include="01 game.cpp" />
     <ClCompile Include="BULLET.cpp" />
     <ClCompile Include="CHARA.cpp" />
+    <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="DATA.cpp" />
     <ClCompile Include="ENEMIES.cpp" />
     <ClCompile Include="ENEMY.cpp" />
     <ClCompile Include="ENEMY2.cpp" />
@@ -193,6 +195,7 @@
     <ClInclude Include="BULLET.h" />
     <ClInclude Include="CHARA.h" />
     <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="DATA.h" />
     <ClInclude Include="ENEMIES.h" />
     <ClInclude Include="ENEMY.h" />
     <ClInclude Include="ENEMY_BULLET.h" />
@@ -208,6 +211,9 @@
     <ClInclude Include="SCORE.h" />
     <ClInclude Include="START.h" />
     <ClInclude Include="START1_1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DATA.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

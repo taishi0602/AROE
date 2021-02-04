@@ -1,3 +1,4 @@
+#include<iostream>
 #include"CONTAINER.h"
 #include"PLAYER.h"
 #include"PLAYER_BULLETS.h"
@@ -7,15 +8,17 @@ enum a {
 };
 PLAYER_BULLETS* PLAYER::Bullets = 0;
 void PLAYER::init(CONTAINER*c) {
+	c->loadData("DATA.txt");
+	Px = c->fData("playerPx");
+	Py = c->fData("playerPy");
+	Rad = c->fData("playerRad");
+	Speed = c->fData("playerSpeed");
+    BlinkNumFrames = c->iData("playerBlinkNumFrames");
+	BlinkInterval = c->iData("playerBlinkInterval");
+	TriggerCnt = c->iData("playerTriggerCnt");
+	TriggerInterval = c->iData("playerTriggerInterval");
 	Img = c->player.Img;
-	Px = c->player.Px;
-	Py = c->player.Py;
 	Color = c->playerColor;
-	TriggerInterval = c->playerTriggerInterval;
-
-	BlinkNumFrames = c->playerBlinkNumFrames;
-	BlinkInterval = c->playerBlinkInterval;
-	CorrectRad = c->playerCorrectRad;
 }
 void PLAYER::updata(int*state) {
 	if (isTrigger(KEY_C)) {
@@ -28,16 +31,16 @@ void PLAYER::updata(int*state) {
 		Color.a = 0.1f;
 	}
 	if (isPress(KEY_UP)) {
-		Py -= 4.0f;
+		Py -= Speed;
 	}
 	if (isPress(KEY_DOWN)) {
-		Py += 4.0f;
+		Py += Speed;
 	}
 	if (isPress(KEY_LEFT)) {
-		Px -= 4.0f;
+		Px -= Speed;
 	}
 	if (isPress(KEY_RIGHT)) {
-		Px += 4.0f;
+		Px +=Speed;
 	}
 	if (Px <= 65.0f) {
 		Px = 65.0f;

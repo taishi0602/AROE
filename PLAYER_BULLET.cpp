@@ -14,7 +14,7 @@ void PLAYER_BULLET::init(CONTAINER* c) {
 
 	SqDistance = pow(c->playerBulletDistance, 2);//ìÒèÊ
 }
-void PLAYER_BULLET::appear(float px, float py, float rad) {
+void PLAYER_BULLET::appear(float px, float py, float rad) {//mukihakokodekaeru
 	Color.a = 1.0f;
 	Px = px;
 	Py = py;

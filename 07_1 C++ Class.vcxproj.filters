@@ -24,6 +24,8 @@
     <ClCompile Include="ENEMY2.cpp" />
     <ClCompile Include="BULLET.cpp" />
     <ClCompile Include="ENEMY_BULLET2.cpp" />
+    <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="DATA.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CONTAINER.h" />
@@ -44,5 +46,9 @@
     <ClInclude Include="ENEMY_ENCOUNT.h" />
     <ClInclude Include="CHARA.h" />
     <ClInclude Include="BULLET.h" />
+    <ClInclude Include="DATA.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DATA.txt" />
   </ItemGroup>
 </Project>

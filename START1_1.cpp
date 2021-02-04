@@ -1,11 +1,13 @@
+#include<iostream>
 #include"START1_1.h"
 #include"CONTAINER.h"
 #include"input.h"
 #define STATE_PLAY 1
 void START1_1::init(CONTAINER*c) {
 	Img = c->start.Img;
-	Px = c->start.Px;
-	Py = c->start.Py;
+	Px = c->iData("startPx");
+	Py = c->iData("startPy");
+
 	Img2 = c->startBotton.Img;
 	Px2 = c->startBotton.Px;
 	Py2 = c->startBotton.Py;
