@@ -4,13 +4,14 @@
 #include"input.h"
 int PLAY_BACK::idx = 0;
 void PLAY_BACK::init(CONTAINER* c) {
+	c->loadData("DATA.txt");
 	Img[0] = c->desertBack.Img;
 	Img[1] =  c->DR_Back.Img;
 	Img[2] =c->ruinsBack.Img;
 	Img[3] = c->bossBack.Img;
 	ImgS = c->scoreBack.Img;
-	Py = c->desertBack.Py+idx;
-	Px = c->desertBack.Px;
+	Px = c->fData("BackPx");
+	Py = c->fData("BackPy")+idx;
 	idx -= 1080;
 
 }

@@ -1,5 +1,8 @@
 #include"ENEMIES.h"
 #include"CONTAINER.h"
+enum {
+	p0,p1,p2,p3,p4,p5
+};
 ENEMIES::ENEMIES(CONTAINER* c) {
 	Num = c->enemiesNum;//”z—ñ
 	Num2 = c->enemiesNum2;
@@ -103,34 +106,35 @@ ENEMY* ENEMIES::enemy(int i) {
 ENEMY2* ENEMIES::enemy2(int i) {
 	return Enemy2 + i;
 }
-void ENEMIES::Encount(int enemy) {//Ží—Þ‚ð“n‚³‚ê‚é
-	if (enemy == 1) {//Wave1
+void ENEMIES::Encount(int enemyWave) {//Ží—Þ‚ð“n‚³‚ê‚é
+	switch (enemyWave) {
+	case p0:
 		for (int i = 3; i < 9; i++) {
 			Enemy[i].Color.a = 1.0f;
 		}
-	}
-	if (enemy == 2) {
+		break;
+	case p1:
 		for (int i = 0; i < 3; i++) {
 			Enemy[i].Color.a = 1.0f;
 		}
 		Enemy2[0].Color.a = 1.0f;
 		Enemy2[2].Color.a = 1.0f;
-	}
-	if (enemy == 3) {
+		break;
+	case p2:
 		for (int i = 0; i < 3; i++) {
 			Enemy[i].Color.a = 1.0f;
 		}
 		Enemy2[0].Color.a = 1.0f;
 		Enemy2[1].Color.a = 1.0f;
-	}
-	if (enemy == 4) {
+		break;
+	case p3:
 		Enemy2[0].Color.a = 1.0f;
-	}
-	if (enemy == 4) {
 		Enemy2[1].Color.a = 1.0f;
-	}
-	if (enemy == 4) {
 		Enemy2[2].Color.a = 1.0f;
+	case p4:
+		break;
+	case p5:
+		break;
 	}
 }
 

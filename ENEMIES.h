@@ -9,7 +9,7 @@ public:
 	void init(CONTAINER* c);
 	void updata(PLAYER*target);
 	void draw();
-	void Encount(int enemy);
+	void Encount(int enemyWave);
 
 
 	int num();//Getterä÷êî
@@ -24,4 +24,5 @@ private:
 	ENEMY* Enemy = 0;//îzóÒ
 	ENEMY2* Enemy2 = 0;
 	int Cnt=0;
+	int n = 0;
 };

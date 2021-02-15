@@ -1,6 +1,27 @@
-7
-startPx 960
-startPy 540
+32
+encountMax 6
+encountTime5 30
+encountTime4 25
+encountTime3 20
+encountTime2 15
+encountTime1 10
+encountTime0 5
+enemyWave5 5
+enemyWave4 4
+enemyWave3 3
+enemyWave2 2
+enemyWave1 1
+enemyWave0 0
+resultPx 960
+resultPy 540
+BackPx 660
+BackPy 540
+startArowPx 810
+startArowPy 800
+startBottonPx 960
+startBottonPy 900
+startScreenPx 960
+startScreenPy 540
 playerPx 660
 playerPy 900
 playerRad 0
@@ -9,4 +30,4 @@ playerBlinkNumFrames 60
 playerBlinkInterval 5
 playerTriggerInterval 10
 playerTriggerCnt 5
-playerCorrectRad 0.5f
+playerCorrectRad 0.5

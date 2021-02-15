@@ -39,6 +39,7 @@ void PLAYER_BULLET::updata() {
 		float y = target->py() - Py;
 		if (x * x + y * y <= SqDistance) {//“–‚½‚è”»’è
 			target->damage();//ENEMY‚Ö
+			Color.a = 0.0f;
 			break;
 		}
 	}
@@ -49,6 +50,7 @@ void PLAYER_BULLET::updata() {
 		float y = target->py() - Py;
 		if (x * x + y * y <= SqDistance) {//“–‚½‚è”»’è
 			target->damage();//ENEMY‚Ö
+			Color.a = 0.0f;
 			break;
 		}
 	}

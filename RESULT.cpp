@@ -4,8 +4,8 @@
 SCORE* RESULT::Score = 0;
 void RESULT::init(CONTAINER* c) {
 	Img = c->result.Img;
-	Px = c->result.Px;
-	Py = c->result.Py;
+	Px = c->iData("resultPx");
+	Py = c->iData("resultPy");
 
 	numImg[0] = c->num[0].Img;
 	numImg[1] = c->num[1].Img;

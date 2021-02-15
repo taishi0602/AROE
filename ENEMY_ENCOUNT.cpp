@@ -1,20 +1,21 @@
 #include"ENEMY_ENCOUNT.h"
 #include"ENEMIES.h"
 ENEMIES* ENEMY_ENCOUNT::Enemies = 0;
-ENEMY_ENCOUNT::ENEMY_ENCOUNT() {
-	encount[0].enemyWave = 1;
-	encount[0].encountTime = 5;
-	encount[1].enemyWave = 2;
-	encount[1].encountTime = 10;
-	encount[2].enemyWave = 3;
-	encount[2].encountTime = 15;
-	encount[3].enemyWave = 4;
-	encount[3].encountTime = 30;
-	encount[4].enemyWave = 5;
-	encount[4].encountTime = 30;
-	encount[5].enemyWave = 6;
-	encount[5].encountTime = 30;
-	encountMax = 10;
+ENEMY_ENCOUNT::ENEMY_ENCOUNT(CONTAINER*c) {
+	c->loadData("DATA.txt");
+	encount[0].enemyWave = c->iData("enemyWave0");
+	encount[0].encountTime = c->iData("encountTime0");
+	encount[1].enemyWave = c->iData("enemyWave1");
+	encount[1].encountTime = c->iData("encountTime1");
+	encount[2].enemyWave = c->iData("enemyWave2");
+	encount[2].encountTime = c->iData("encountTime2");
+	encount[3].enemyWave = c->iData("enemyWave3");
+	encount[3].encountTime = c->iData("encountTime3");
+	encount[4].enemyWave = c->iData("enemyWave4");
+	encount[4].encountTime = c->iData("encountTime4");
+	encount[5].enemyWave = c->iData("enemyWave5");
+	encount[5].encountTime = c->iData("encountTime5");
+	encountMax = c->iData("encountMax");
 }
 void ENEMY_ENCOUNT::updata() {
 	if (gameCnt==60) {

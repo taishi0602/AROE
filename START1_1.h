@@ -6,15 +6,14 @@ public:
 	void updata(int*state);
 	void draw();
 private:
+	struct sDATA {
 	int Img = 0;
-    int Px = 0;
-    int Py = 0;
-	int Img2 = 0;
-	int Px2 = 0;
-	int Py2 = 0;
-	int Img3 = 0;
-	int Px3 = 0;
-	int Py3 = 0;
+    float Px = 0;
+    float Py = 0;
+	};
+	sDATA startScreen;
+	sDATA startBotton;
+	sDATA startArow;
 
 	int BlinkStart = 0;
 	int BlinkCnt = 120;

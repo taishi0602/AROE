@@ -3,7 +3,7 @@ class CONTAINER;
 class ENEMIES;
 class ENEMY_ENCOUNT {
 public:
-	ENEMY_ENCOUNT();
+	ENEMY_ENCOUNT(CONTAINER*c);
 	void updata();
 	static void setColor(ENEMIES* enemies) { Enemies = enemies; }
 private:

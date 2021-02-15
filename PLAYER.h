@@ -31,8 +31,6 @@ private:
     
 	int CorrectRad = 0;
 	int BlinkCnt = 0;
-	
-	
 
 	static PLAYER_BULLETS* Bullets;
 
